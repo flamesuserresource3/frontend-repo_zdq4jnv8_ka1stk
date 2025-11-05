@@ -1,36 +1,37 @@
 import React from 'react';
 
 const NavBar = () => {
-  const goTo = (id) => {
+  const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50">
-      <div className="mx-auto max-w-7xl px-4">
-        <div className="mt-4 backdrop-blur supports-[backdrop-filter]:bg-white/40 bg-white/70 dark:bg-neutral-900/60 rounded-full border border-black/10 dark:border-white/10 shadow-sm">
-          <div className="flex items-center justify-between px-4 py-2">
-            <button
-              onClick={() => goTo('hero')}
-              className="text-sm font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              aria-label="Go to Home"
-            >
-              Home
-            </button>
-            <div className="flex items-center gap-3">
-              <button
-                onClick={() => goTo('events')}
-                className="text-sm font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                aria-label="Go to Events"
-              >
-                Events
-              </button>
-            </div>
-          </div>
-        </div>
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/40 bg-white/70 border-b border-black/5">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+        <button
+          onClick={() => scrollTo('hero')}
+          className="font-semibold tracking-tight text-neutral-800 hover:text-neutral-900 focus:outline-none"
+          aria-label="Go to Home"
+        >
+          FIESTA • Enterprise Timeline
+        </button>
+        <nav className="flex items-center gap-2">
+          <button
+            onClick={() => scrollTo('hero')}
+            className="px-3 py-1.5 rounded-md text-sm font-medium text-neutral-700 hover:text-neutral-900 hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-400"
+          >
+            Home
+          </button>
+          <button
+            onClick={() => scrollTo('ancient')}
+            className="px-3 py-1.5 rounded-md text-sm font-medium text-white bg-neutral-900 hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-400"
+          >
+            Events
+          </button>
+        </nav>
       </div>
-    </div>
+    </header>
   );
 };
 
