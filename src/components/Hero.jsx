@@ -12,15 +12,15 @@ const Hero = () => {
       </div>
 
       {/* Subtle gradient overlay for readability */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/60" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/70" />
 
       <div className="relative z-10 flex h-full w-full items-center justify-center text-center px-6">
         <div>
           <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight text-white drop-shadow-lg">
             FIESTA
           </h1>
-          <p className="mt-4 text-lg md:text-2xl text-white/80 max-w-2xl mx-auto">
-            Automotive energy. Sports adrenaline. Corporate polish. A dynamic celebration — welcome to Fiesta.
+          <p className="mt-4 text-lg md:text-2xl text-white/85 max-w-3xl mx-auto">
+            An entrepreneurship festival tracing the eras of enterprise — from ancient markets to AI frontiers.
           </p>
         </div>
       </div>
